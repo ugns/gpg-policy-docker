@@ -32,7 +32,7 @@ if (file_exists($licenseFile)):
 endif;
 
 function get_version() {
-  return join ('.', array(constant(GPG_APP_VER_MAJOR), constant(GPG_APP_VER_MINOR), constant(GPG_APP_VER_PATCH)));
+  return join ('.', array(GPG_APP_VER_MAJOR, GPG_APP_VER_MINOR, GPG_APP_VER_PATCH));
 }
 
 function get_licensee() {
