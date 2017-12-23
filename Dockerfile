@@ -9,4 +9,4 @@ COPY src/ /var/www/html/
 RUN a2enmod rewrite && a2enconf gpg-policy
 
 HEALTHCHECK --interval=5m --timeout=3s \
-  CMD curl -sf http://localhost/ || exit 1
+  CMD curl -fL http://localhost/ || exit 1

@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine on
-	RewriteBase /legal/gpg
+	RewriteBase /gpg
 	
 	RewriteCond %{QUERY_STRING} ^(\w+)=(\w+)$
 	RewriteRule policy\.([0-9]{8})$ policy/$1/%2?	[R,L]
@@ -10,5 +10,5 @@
 	RewriteRule policy\.([0-9]{8})\.([A-Za-z0-9]{8})\.sign$ \
 		    signature/$1/$2			[R,L]
 
-	RewriteRule ^$ /legal/gpg			[R,L]
+	RewriteRule ^$ /gpg			[R,L]
 </IfModule>
