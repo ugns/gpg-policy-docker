@@ -108,7 +108,11 @@ function get_config() {
 
 	$refs = pathinfo($_SERVER['SCRIPT_NAME']);
 
-	$config['baseurl'] = $refs['dirname'];
+	if (strlen($refs['dirname']) > 1):
+		$config['baseurl'] = $refs['dirname'];
+	else:
+		$config['baseurl'] = '';
+	endif;
 	if (isset($refs['filename'])):
 		$config['script'] = $refs['filename'];
 	else:
